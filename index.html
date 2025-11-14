@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Launch</title>
+    <style>
+        /* ====== GLOBAL ====== */
+        button,
+        a.button-link {
+            transition: 0.3s ease;
+        }
+
+        button:hover,
+        a.button-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.15);
+            opacity: 0.9;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ====== HEADER ====== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, 0.55);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 12px 20px;
+        }
+
+        header .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ====== HERO ====== */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ====== ANIMATION ====== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ====== TIMELINE GRID ====== */
+        .stage {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .stage {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+
+        .img-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+
+        /* ====== FOOTER ====== */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        footer input {
+            padding: 8px 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        footer button {
+            padding: 8px 16px;
+            background: white;
+            color: black;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            font-size: 14px;
+            text-decoration: none;
+            border: 1px solid #555;
+            color: white;
+            background: transparent;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            /* острые углы */
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .btn-light {
+            background: #fff;
+            color: #000;
+            border: 1px solid #fff;
+        }
+
+        .btn-light:hover {
+            background: transparent;
+            color: #fff;
+            border-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="logo-row">
+                <img src="img\лого2пнгвайт.png" alt="logo" style="height:35px; width:auto;" />
+            </div>
+            <nav>
+                <a href="#about">О бренде</a>
+                <a href="#timeline">Этапы</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-grid">
+        <div class="fade-up">
+            <h1 style="font-size: 36px; margin-bottom: 15px;">STFS</h1>
+            <p style="color:#ccc; max-width:480px;">STFS — это не просто бренд, а многопрофильная творческая компания,
+                формирующая собственную культурную экосистему. Изначально рождённый как личная история, он постепенно
+                вырос в полноценный проект, объединяющий различные направления искусства и самовыражения.
+
+                Сегодня STFS развивается сразу в нескольких сферах:
+                — кинематограф, где будут создаваться короткометражные и полнометражные проекты с уникальным визуальным
+                стилем;
+                — литература, включающая авторские книги, сценарии и художественные произведения;
+                — одежда, в которой отражены философия бренда, его эстетика и особое восприятие классики.
+
+                Каждый элемент — будь то фильм, книга или коллекция одежды — следует общей идее: передавать
+                эмоциональный опыт, формировать атмосферу и рассказывать истории через искусство.
+
+                Бренд стремится создать собственный мир, в котором сочетаются визуальная строгость, интеллектуальная
+                глубина и продуманный минимализм. STFS — это место, где стиль становится языком, а творчество — основой
+                развития.
+
+                В ближайшее время планируется выпуск большого количества нового контента, расширение направлений и выход
+                на совершенно новый уровень. Цель бренда — не просто производить продукты, а формировать культурный след
+                и вдохновлять через каждую работу.</p>
+            <div style="margin-top:25px; display:flex; gap:10px;">
+                <a href="#timeline" class="btn">Этапы</a>
+                <a href="#contact" class="btn btn-light">Связаться</a>
+            </div>
+        </div>
+        <div class="fade-up">
+            <div class="img-box" style="aspect-ratio: 4/5;">
+                <img src="img\лого.png" alt="hero" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="fade-up">
+            <h2 style="font-size:30px;">Как создавался бренд</h2>
+            <p style="color:#ccc; max-width:700px; font-size:20px; margin-top:10px;">Бренд был создан в 2023 году.
+                Первое название — /27:57/ — отражало адрес, в котором вырос и сформировался его создатель: номер дома и
+                номер квартиры стали символом личной истории и взросления.
+
+                Со временем концепция развивалась, переходя от неформальной эстетики к более классическому и выверенному
+                стилю. Вместе с этим трансформировались и имя, и визуальный образ бренда. Так появилось новое название —
+                STFS. Оно сохранило первоначальный смысл, но получило иную форму: словосочетание Twenty-seven
+                fifty-seven было переработано, а зеркальное преобразование первой цифры дало жизнь уникальному и
+                запоминающемуся графическому образу — ST FS.</p>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline">
+        <div class="fade-up">
+            <h2 style="font-size:30px;">Этапы создания</h2>
+        </div>
+
+        <!-- Stage 1 -->
+        <div class="stage fade-up">
+            <div class="img-box">
+                <img src="img\photo_2024-11-09_16-28-38.jpg" alt="Logo v1" />
+            </div>
+            <div>
+                <h3 style="font-size:25px;">Логотип — первая версия</h3>
+                <p style="color:#ccc; font-size:20px;">Первый логотип был выполнен из двух цифр, имел острые контуры и был белого цвета.</p>
+            </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="stage fade-up">
+            <div class="img-box" style="aspect-ratio:3/4;">
+                <img src="img\IMG_1182.JPEG" alt="early" />
+            </div>
+            <div>
+                <h3 style="font-size:25px;">Первые версии одежды</h3>
+                <p style="color:#ccc; font-size:20px;">Первая одежда должна была стать мерчем. Существовала версия с лентами по всей футболке и версия с логотипом и названием сценариев создателя на спине.</p>
+            </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="stage fade-up">
+            <div class="img-box" style="aspect-ratio:3/4;">
+                <img src="img\IMG_1185.JPEG" alt="final" />
+            </div>
+            <div>
+                <h3 style="font-size:25px;">Финальные версии</h3>
+                <p style="color:#ccc; font-size:20px;">Финальная версия представляет собой футболку с небольшим логотипом на груди и крупным логотипом на спине, изображающим Статую Свободы, с дополнительной информацией о ней в нижней части изделия.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <h4 style="font-size:20px; margin-bottom:10px;">STFS</h4>
+
+        <div style="color:#aaa; font-size:16px; line-height:1.8;">
+            <p>Email:
+                <a href="mailto:STFSComp@gmail.com"
+                    style="color:white; text-decoration:none; border-bottom:1px solid #444; transition:0.3s;">
+                    STFSComp@gmail.com
+                </a>
+            </p>
+
+            <p>Telegram:
+                <a href="https://t.me/YourTelegramHere" target="_blank"
+                    style="color:white; text-decoration:none; border-bottom:1px solid #444; transition:0.3s;">
+                    @stfs27
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Анимация появления при скролле
+        const elements = document.querySelectorAll('.fade-up');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        elements.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
